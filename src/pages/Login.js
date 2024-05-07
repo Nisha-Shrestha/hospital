@@ -8,7 +8,7 @@ export const Login = () => {
       <div className="body">
             <div className="header">
                 <img src={Logo} className="logo" alt="Hospital logo" />
-                <span>sudoEMR</span>
+                <span className="heading">sudo<span style={{fontSize:"20px",fontWeight:800}}>EMR</span></span>
             </div>
             <Form labelCol={{span : 5}} layout="vertical">
                         <h4>Login Here</h4>
