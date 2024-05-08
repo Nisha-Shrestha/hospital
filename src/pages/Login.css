@@ -8,21 +8,16 @@
 {
     color: #2972DC;
 }
-Form > h3{
-    color:#5B5B5B
+h3{
+    color:#997f7f;
 }
 .register {
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 20px;
 }
-.input-field
-{
-    background-color:#F1F1F1;
-    border:none;
-    padding:6px 7px
-}
+
 .body .header{
     display: flex;
     align-items: center;
@@ -38,7 +33,20 @@ Button {
 
 .input-box .ant-form-item {
     margin-bottom: 10px; 
+    
 }
 .logo {
     margin-right: 5px;
 }
+.custom-label {
+    font-size: 12px;
+    color: #5f4444;
+    display: inline-block;
+}
+.ant-form-item .ant-form-item-label {
+    padding: 0;
+}
+.required-symbol {
+    margin-left: 3px; 
+    color: red; 
+  }
