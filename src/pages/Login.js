@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Form, Input, Button, message} from "antd";
 import "./Login.css";
 import Logo from "../assets/icon.ico"
@@ -40,7 +41,7 @@ export const Login = () => {
                                     min : 4,
                                 },
                             ]}
-                            >
+                            hasFeedback>
                                 <div className="input-container">
                                 <Input style={{backgroundColor:"#F1F1F1",border:"none",padding:"7px 7px"}}  placeholder="Username" />
                                 </div>
@@ -62,7 +63,7 @@ export const Login = () => {
                                     min : 6,
                                 },
                             ]}
-                            >
+                            hasFeedback>
                                 <div className="input-container">
                                     <Input.Password style={{backgroundColor:"#F1F1F1",border:"none",padding:"7px 7px"}} placeholder="Password"  />
                                 </div>
@@ -73,7 +74,7 @@ export const Login = () => {
                     <div className="register">
                         <div className="register-mid">
                             <span style={{marginRight: "4px"}}>Don't have an account?</span>
-                            <a href="#">Register</a>
+                            <Link to = "/register">Register</Link>
                         </div>
                         <div className="button">
                         <Form.Item>
