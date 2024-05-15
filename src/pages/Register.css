@@ -1,19 +1,64 @@
-.input-container{
-    margin-right: 40px;
-    width : 250px;
+.bodyreg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .form-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .image-container {
+    flex: 1;
+  }
+  
+  .header {
     display: flex;
     justify-content: space-between;
-   
-}
-.header{
+    align-items: center;
+  }
+  
+  .custom-label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .input-container {
+    margin-bottom: 16px;
+  }
+  
+  .footer-div {
     display: flex;
     justify-content: space-between;
-}
-.body{
-display: grid;
-width: 1000px;
-}
-.footer-div{
-    display: flex;
-    justify-content: space-between;
-}
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .required-symbol {
+    color: red;
+  }
+  
+  .ant-form-item-explain-error {
+    margin-top: 4px;
+  }
+  
+  .ant-btn-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+  }
+  
+  .ant-btn-primary:hover,
+  .ant-btn-primary:focus {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+  }
+  
