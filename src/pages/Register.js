@@ -1,11 +1,31 @@
 import { Link } from "react-router-dom";
-import { Form, Input, Checkbox, Button, message } from "antd";
+import { Form, Input, Checkbox, Button, message, Select } from "antd";
 import "./Register.css";
 import { useState } from "react";
 
 export const Register = () => {
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
+
+    const prefixSelector = (
+        <Form.Item name="prefix" noStyle>
+          <Select
+            style={{
+              width: 90,
+              backgroundColor: "#F1F1F1",
+              border: "none" ,
+              padding: "7px 7px"
+            }}
+          >
+            <Select value="+977">+977(Nepal)</Select>
+            <Select value="+1">+1 (USA)</Select>
+            <Select value="+44">+44 (UK)</Select>
+            <Select value="+91">+91 (India)</Select>
+            <Select value="+61">+61 (Australia)</Select>
+            <Select value="+81">+81 (Japan)</Select>
+          </Select>
+        </Form.Item>
+      );
 
     const onFinish = async (values) => {
         setLoading(true);
@@ -61,7 +81,7 @@ export const Register = () => {
                     <div className="input-container">
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px", whiteSpace: "nowrap", width: "auto" }}>Hospital Name<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px", whiteSpace: "nowrap", width: "auto" }}>Hospital Name<span className="required-symbol"></span></span>}
                             name="HospitalName"
                             rules={[
                                 {
@@ -83,7 +103,7 @@ export const Register = () => {
                         </Form.Item>
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px", width: "500px" }}>Prefix (Hospital File Format)<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px", width: "500px" }}>Prefix (Hospital File Format)<span className="required-symbol"></span></span>}
                             name="Prefix"
                             rules={[
                                 {
@@ -107,7 +127,7 @@ export const Register = () => {
                     <div className="input-container">
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px", width: "500px" }}>Hospital Address<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px", width: "500px" }}>Hospital Address<span className="required-symbol"></span></span>}
                             name="HospitalAddress"
                             rules={[
                                 {
@@ -131,7 +151,7 @@ export const Register = () => {
                     <div className="input-container">
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>First Name<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>First Name<span className="required-symbol"></span></span>}
                             name="FirstName"
                             rules={[
                                 {
@@ -152,7 +172,7 @@ export const Register = () => {
                         </Form.Item>
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Last Name<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Last Name<span className="required-symbol"></span></span>}
                             name="LastName"
                             rules={[
                                 {
@@ -175,7 +195,7 @@ export const Register = () => {
                     <div className="input-container">
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Email<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Email<span className="required-symbol"></span></span>}
                             name="Email"
                             rules={[
                                 {
@@ -196,7 +216,7 @@ export const Register = () => {
                         </Form.Item>
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Phone Number<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Phone Number<span className="required-symbol"></span></span>}
                             name="PhoneNumber"
                             rules={[
                                 {
@@ -214,15 +234,20 @@ export const Register = () => {
                                 },
                             ]}
                             hasFeedback>
-                            <div className="input-container">
-                                <Input style={{ backgroundColor: "#F1F1F1", border: "none", padding: "7px 7px" }} type="text" />
+                            <div className="input-container" >
+                                <Input
+                                addonBefore={prefixSelector}
+                                
+                                style={{ backgroundColor: "#F1F1F1", border: "none", padding: "7px 7px"  }} type="text" />
+                                    
+                                  
                             </div>
                         </Form.Item>
                     </div>
                     <div className="input-container">
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Username<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Username<span className="required-symbol"></span></span>}
                             name="Username"
                             rules={[
                                 {
@@ -243,7 +268,7 @@ export const Register = () => {
                         </Form.Item>
                         <Form.Item
                             autoComplete="off"
-                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Password<span className="required-symbol">*</span></span>}
+                            label={<span className="custom-label" style={{ paddingBottom: "0px" }}>Password<span className="required-symbol"></span></span>}
                             name="password"
                             rules={[
                                 {
@@ -274,7 +299,7 @@ export const Register = () => {
                                 },
                             ]}
                         >
-                            <Checkbox>I have read and agree to the terms of <span style={{ color: "cornflowerblue" }}>sudoEMR</span></Checkbox>
+                            <Checkbox>I have read and agree to the terms of <span style={{ color: "cornflowerblue" }}><Link to ='/home'>SudoEMR</Link></span></Checkbox>
                         </Form.Item>
                         <Form.Item>
                             <Button
