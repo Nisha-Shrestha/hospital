@@ -13,9 +13,17 @@
     padding: 15px;
     border-radius: 5px;
     box-shadow: 1px 11px 32px 4px rgba(0,0,0,0.22);
-    display: grid;
-    
     width: 580px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* added */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 65px;
 
 }
 .bodyreg .footer-div{

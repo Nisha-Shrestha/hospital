@@ -1,30 +1,19 @@
-.navbar{
-    background-color: white;
+.navbar {
+    display: flex;
+    
+    align-items: center;
+    background-color: white; 
+    padding: 10px 20px;
     color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 5px;
-    font-size: 13px;
-    font-family: "aerial";
-    height: 60px;
-}
-.Logo{
-        height: 50px;
-        width: 100px;
-}
-.Logo h1{
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
 }
 
 .navbar .Logo {
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
+
 .navbar .Logo img {
     width: 40px;
     height: 40px;
@@ -39,14 +28,15 @@
 .navbar > div {
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
 .navbar > div > .fa-icon {
-    font-size: 24px;
+    font-size: 24px; 
     margin-right: 8px;
 }
 
-.Logo,.Records, .Doctors, .Nursing, .Admin {
+.Logo h1,.Records, .Doctors, .Nursing, .Admin {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -55,8 +45,9 @@
 }
 
 .Logo h1:hover,.Records:hover, .Doctors:hover, .Nursing:hover, .Admin:hover {
-    background-color: #e7e7e7;
+    background-color: #d9e1ea; 
 }
+
 .Logo h1,.Records h1, .Doctors h1, .Nursing h1, .Admin h1 {
     margin-left: 5px;
     font-size: 18px;

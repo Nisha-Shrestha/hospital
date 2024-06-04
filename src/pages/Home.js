@@ -10,12 +10,13 @@ const Home = () => {
         fontSize: '2.5rem',
         backgroundColor: '#f0f8ff',
         fontFamily: 'Arial, sans-serif',
-        height: 700,
-        width: 1300,
+        height: '100vh',
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        textAlign:'center'
          }}>
 
           

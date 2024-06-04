@@ -18,7 +18,7 @@ export const Login = () => {
     }
   return (
     <main>
-      <div className="body">
+      <div className="mainbody">
             <div className="header">
                 <img src={Logo} className="logo" alt="Hospital logo" />
                 <span className="heading">sudo<span style={{fontSize:"20px",fontWeight:800}}>EMR</span></span>
